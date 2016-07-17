@@ -17,6 +17,7 @@ extern keymap_config_t keymap_config;
 #define _QWERTY 0
 #define _LOWER 3
 #define _RAISE 4
+#define _MOUSEKEY 5
 #define _ADJUST 16
 
 enum planck_keycodes {
@@ -36,9 +37,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Qwerty
  */
 [_QWERTY] = {
-  {KC_TAB       ,    KC_Q,    KC_W,    KC_E,        KC_R,   KC_T,   KC_Y,        KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC},
+  {LT(_MOUSEKEY, KC_TAB),    KC_Q,    KC_W,    KC_E,        KC_R,   KC_T,   KC_Y,        KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC},
   {CTL_T(KC_ESC),    KC_A,    KC_S,    KC_D,        KC_F,   KC_G,   KC_H,        KC_J,    KC_K,    KC_L,   ALL_T(KC_SCLN), CTL_T(KC_QUOT)},
-  {OSM(MOD_LSFT)      ,    KC_Z,    KC_X,    KC_C,        KC_V,   KC_B,   KC_N,        KC_M,    KC_COMM, KC_DOT,  KC_SLSH, OSM(MOD_RSFT) },
+  {OSM(MOD_LSFT),    KC_Z,    KC_X,    KC_C,        KC_V,   KC_B,   KC_N,        KC_M,    KC_COMM, KC_DOT,  KC_SLSH, OSM(MOD_RSFT) },
   {MO(_ADJUST)  , KC_LCTL, KC_LGUI, OSL(_LOWER), GUI_T(KC_ENT),  KC_ENT, KC_SPC, KC_SPC, OSL(_RAISE), KC_DOWN, KC_UP,   KC_RGHT}
 },
 
@@ -62,6 +63,12 @@ Symbols
   {_______, _______, _______, KC_ENT, _______, _______, _______, _______, _______, _______, _______, _______}
 },
 
+[_MOUSEKEY] = {
+  {_______, _______, _______, _______, _______, _______, _______, KC_MS_BTN1, KC_MS_UP, KC_MS_BTN2, _______, _______},
+  {_______, _______, _______, _______, _______, _______, _______, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, _______, _______},
+  {_______, _______, _______, _______, _______, _______, _______, KC_MS_WH_UP, KC_MS_WH_DOWN, _______, _______, _______},
+  {_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______}
+},
 /* Adjust (Lower + Raise)
  * ,-----------------------------------------------------------------------------------.
  * |      | Reset|      |      |      |      |      |      |      |      |      |  Del |
