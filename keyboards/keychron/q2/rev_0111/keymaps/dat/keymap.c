@@ -35,10 +35,10 @@ KC_LCTL,    KC_LOPT,  KC_LCMD,                                  KC_SPC,         
     ),
 
     [_SYM] = LAYOUT_ansi_67(
-KC_GRV,   KC_BRID,   KC_BRIU,    KC_MCTL,    KC_LPAD,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,    KC_VOLD,  KC_VOLU,  _______,  _______,
-KC_TILD,  KC_EXLM,   KC_AT,      KC_HASH,    KC_DLR,   KC_PERC,  KC_CIRC,  KC_AMPR,  KC_ASTR,  _______,  _______,    _______,  _______,  _______,  _______,
-_______,  S(KC_EQL), KC_MINS,    KC_LCBR,    KC_LPRN,  KC_LBRC,  KC_RBRC,  KC_RPRN,  KC_RCBR,  KC_SCLN,  S(KC_SCLN), _______,  _______,            _______,
-_______,  KC_EQL,    S(KC_MINS), S(KC_BSLS), _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,            _______,
+KC_GRV,   KC_BRID,   KC_BRIU,    KC_MCTL, KC_LPAD,    RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,     KC_MUTE,    KC_VOLD,  KC_VOLU,  _______,  _______,
+KC_TILD,  KC_EXLM,   KC_AT,      KC_HASH, KC_DLR,     KC_PERC,  KC_CIRC,  KC_AMPR,  KC_ASTR,  _______,     _______,    _______,  _______,  _______,  _______,
+_______,  S(KC_EQL), KC_MINS,    KC_LCBR, KC_LPRN,    KC_LBRC,  KC_RBRC,  KC_RPRN,  KC_RCBR,  KC_SCLN,     S(KC_SCLN), _______,  _______,            _______,
+_______,  KC_EQL,    S(KC_MINS), _______, S(KC_BSLS), KC_BSLS,  _______,  KC_GRV,   KC_QUOT,  S(KC_QUOT),  _______,    _______,            _______,
 _______,  _______,   _______,                          _______,                      _______,  _______,  _______,              _______,  _______,  _______
         ),
 
