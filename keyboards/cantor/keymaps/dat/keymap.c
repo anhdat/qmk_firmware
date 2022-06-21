@@ -34,13 +34,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 KC_TAB,     KC_Q,     KC_W,     KC_E,           KC_R,           KC_T,                                      KC_Y,     KC_U,           KC_I,     KC_O,       KC_P,      KC_BSPC,
 CT(KC_ESC), CT(KC_A), AT(KC_S), ST(KC_D),       GT(KC_F),       KC_G,                                      KC_H,     GT(KC_J),       ST(KC_K), AT(KC_L),   OSL(_SYM), KC_QUOT,
 KC_LSFT,    KC_Z,     GT(KC_X), KC_C,           LT(_NAV, KC_V), KC_B,                                      KC_N,     LT(_NUM, KC_M), KC_COMM,  GT(KC_DOT), KC_SLSH,   KC_RSFT,
-                                                _______,        _______, _______,             KC_ENT,      KC_SPC,   KC_RALT
+                                                KC_TAB,      KC_BSPC,  CT(KC_ESC),              KC_ENT,      KC_SPC,   KC_RALT
     ),
 
     [_SYM] = LAYOUT_split_3x6_3(
 KC_TILD,  KC_EXLM,   KC_AT,      KC_HASH,    KC_DLR,   KC_PERC,                               KC_CIRC,  KC_AMPR,  KC_ASTR,  _______,  _______,    _______,
 _______,  S(KC_EQL), KC_MINS,    KC_LCBR,    KC_LPRN,  KC_LBRC,                               KC_RBRC,  KC_RPRN,  KC_RCBR,  KC_SCLN,  S(KC_SCLN), _______,
-_______,  KC_EQL,    S(KC_MINS), S(KC_BSLS), S(KC_BSLS),  _______,                               _______,  _______,  _______,  _______,  _______,    _______,
+_______,  KC_EQL,    S(KC_MINS), S(KC_BSLS), S(KC_BSLS),  _______,                            S(KC_TILD),  KC_TILD,  S(KC_QUOT),  KC_QUOT,  _______,        _______,
                                              _______,  _______, _______,             _______, _______,  _______
         ),
 

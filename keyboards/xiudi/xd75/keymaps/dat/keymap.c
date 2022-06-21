@@ -44,17 +44,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QW] = LAYOUT_ortho_5x15( /* QWERTY */
 KC_GRV,     KC_1,     KC_2,     KC_3,           KC_4,           KC_5,    _______,  _______,   _______,     KC_6,     KC_7,           KC_8,     KC_9,       KC_0,      KC_MINS,
 KC_TAB,     KC_Q,     KC_W,     KC_E,           KC_R,           KC_T,    _______,  _______,   _______,     KC_Y,     KC_U,           KC_I,     KC_O,       KC_P,      KC_BSPC,
-CT(KC_ESC), CT(KC_A), AT(KC_S), ST(KC_D),       GT(KC_F),       KC_G,    _______,  _______,   _______,     KC_H,     GT(KC_J),       ST(KC_K), AT(KC_L),   OSL(_SYM), KC_ENT,
-KC_LSFT,    KC_Z,     GT(KC_X), KC_C,           LT(_NAV, KC_V), KC_B,    _______,  _______,   _______,     KC_N,     LT(_NUM, KC_M), KC_COMM,  GT(KC_DOT), KC_SLSH,   KC_RSFT,
-_______,    _______,  _______,  _______,        _______,        _______, _______,  _______,   _______,     _______,  KC_SPC,         KC_LEFT,  KC_DOWN,    KC_UP,     KC_RGHT
+CT(KC_ESC), CT(KC_A), AT(KC_S), ST(KC_D),       GT(KC_F),       KC_G,    _______,  _______,   _______,     KC_H,     GT(KC_J),       ST(KC_K), AT(KC_L),   OSL(_SYM), KC_QUOT,
+KC_LSFT,    KC_Z,     GT(KC_X), KC_C,           LT(_NAV, KC_V), KC_B,    _______,  _______,   _______,     KC_N,     LT(_NUM, KC_M), KC_COMM,  GT(KC_DOT), LT(_NAV, KC_SLSH),   KC_RSFT,
+_______,    _______,  _______,  _______,        _______,        _______, _______,  _______,   _______,     KC_ENT,   KC_SPC,         KC_LEFT,  KC_DOWN,    KC_UP,     KC_RGHT
     ),
-
+    
     [_SYM] = LAYOUT_ortho_5x15(
-KC_GRV,   KC_BRID,   KC_BRIU,    _______,    _______,  RGB_VAD, _______,  _______,   _______, RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,    KC_VOLD,
-KC_TILD,  KC_EXLM,   KC_AT,      KC_HASH,    KC_DLR,   KC_PERC, _______,  _______,   _______, KC_CIRC,  KC_AMPR,  KC_ASTR,  _______,  _______,    _______,
-_______,  S(KC_EQL), KC_MINS,    KC_LCBR,    KC_LPRN,  KC_LBRC, _______,  _______,   _______, KC_RBRC,  KC_RPRN,  KC_RCBR,  KC_SCLN,  S(KC_SCLN), _______,
-_______,  KC_EQL,    S(KC_MINS), S(KC_BSLS), _______,  _______, _______,  _______,   _______, _______,  _______,  _______,  _______,  _______,    _______,
-_______,  _______,   _______,    _______,    _______,  _______, _______,  _______,   _______, _______,  _______,  _______,  _______,  _______,    _______
+KC_GRV,   KC_BRID,   KC_BRIU,    _______,    _______,    RGB_VAD, _______,  _______,   _______,   RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,    KC_VOLD,
+KC_TILD,  KC_EXLM,   KC_AT,      KC_HASH,    KC_DLR,     KC_PERC, _______,  _______,   _______,   KC_CIRC,  KC_AMPR,  KC_ASTR,  _______,  _______,    _______,
+_______,  S(KC_EQL), KC_MINS,    KC_LCBR,    KC_LPRN,    KC_LBRC, _______,  _______,   _______,   KC_RBRC,  KC_RPRN,  KC_RCBR,  KC_SCLN,  S(KC_SCLN), _______,
+_______,  KC_EQL,    S(KC_MINS), KC_BSLS,    S(KC_BSLS), _______, _______,  _______,   _______, S(KC_GRV),  KC_GRV,   _______,  _______,  _______,    _______,
+_______,  _______,   _______,    _______,    _______,    _______, _______,  _______,   _______,   _______,  _______,  _______,  _______,  _______,    _______
         ),
 
     [_NAV] = LAYOUT_ortho_5x15(
@@ -67,9 +67,9 @@ _______,  _______,   _______,    _______,    _______,  _______, _______,  ______
 
     [_NUM] = LAYOUT_ortho_5x15(
 KC_GRV,   KC_BRID,   KC_BRIU,    _______,    _______,  RGB_VAD, _______,  _______,   _______, RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,    KC_VOLD,
-_______,  S(KC_EQL), KC_7,     KC_8,     KC_9,     KC_SLSH, _______,  _______,   _______, _______,  _______,  _______,  _______,  _______,    _______,
-_______,  KC_0,      KC_4,     KC_5,     KC_6,     KC_ASTR, _______,  _______,   _______, _______,  KC_RCMD,  KC_RSFT,  KC_LOPT,  KC_LCTL,     RESET,
-_______,  KC_MINS,   KC_1,     KC_2,     KC_3,     _______, _______,  _______,   _______, _______,  _______, RGB_TOG,   _______,  _______,    _______,
+_______,  S(KC_EQL), KC_7,     KC_8,     KC_9,     KC_SLSH, _______,  _______,   _______, _______,  _______,  _______,  _______,  _______,    RESET,
+_______,  KC_0,      KC_1,     KC_2,     KC_3,     KC_ASTR, _______,  _______,   _______, _______,  KC_RCMD,  KC_RSFT,  KC_LOPT,  KC_LCTL,     _______,
+_______,  KC_MINS,   KC_4,     KC_5,     KC_6,     _______, _______,  _______,   _______, _______,  _______,  KC_RCMD,  _______,  _______,    _______,
 _______,  _______,   _______,    _______,    _______,  _______, _______,  _______,   _______, _______,  _______,  _______,  _______,  _______,    _______
         ),
 
