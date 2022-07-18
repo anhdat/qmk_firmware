@@ -47,21 +47,21 @@ KC_LSFT,    KC_Z,     GT(KC_X), KC_C,           LT(_NAV, KC_V), KC_B,           
     [_SYM] = LAYOUT_split_3x6_3(
 KC_TILD,  KC_EXLM,   KC_AT,      KC_HASH,    KC_DLR,   KC_PERC,                               KC_CIRC,  KC_AMPR,  KC_ASTR,  _______,  _______,    _______,
 _______,  S(KC_EQL), KC_MINS,    KC_LCBR,    KC_LPRN,  KC_LBRC,                               KC_RBRC,  KC_RPRN,  KC_RCBR,  KC_SCLN,  S(KC_SCLN), _______,
-_______,  KC_EQL,    S(KC_MINS), S(KC_BSLS), S(KC_BSLS),  _______,                            S(KC_TILD),  KC_TILD,  S(KC_QUOT),  KC_QUOT,  _______,        _______,
+_______,  KC_EQL,    S(KC_MINS), KC_BSLS, S(KC_BSLS),  _______,                            KC_TILD,  KC_GRV,  S(KC_QUOT),  KC_QUOT,  _______,        _______,
                                              _______,  _______, _______,             _______, _______,  _______
         ),
 
     [_NAV] = LAYOUT_split_3x6_3(
 KC_F1,    KC_F2,     KC_F3,      KC_F4,      KC_F5,    KC_F6,                                 KC_F7,   KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,
 _______,  KC_LCTL,   KC_LOPT,    KC_LSFT,    KC_LCMD,  _______,                               KC_LEFT, KC_DOWN,  KC_UP,    KC_RGHT,  _______,  _______,
-_______,  _______,   _______,    _______,    _______,  _______,                               _______, _______,  _______,  _______,  _______,  _______,
+_______,  _______,   _______,    _______,    _______,  _______,                               KC_MPLY, KC_VOLD,  KC_VOLU,  KC_MNXT,  KC_MPRV,  _______,
                                              _______,  _______, _______,            _______,  _______, _______
         ),
 
     [_NUM] = LAYOUT_split_3x6_3(
 _______,  S(KC_EQL), KC_7,     KC_8,     KC_9,     KC_SLSH,                               _______,  _______,  _______,  _______,  _______,    RESET,
 _______,  KC_0,      KC_1,     KC_2,     KC_3,     KC_ASTR,                               _______,  KC_RCMD,  KC_RSFT,  KC_LOPT,  KC_LCTL,    _______,
-_______,  KC_MINS,   KC_4,     KC_5,     KC_6,     _______,                               _______,  _______, RGB_TOG,   _______,  _______,    _______,
+_______,  KC_MINS,   KC_4,     KC_5,     KC_6,     _______,                               _______,  _______, KC_RCMD,   _______,  _______,    _______,
                                          _______,  _______, _______,             _______, _______,  _______
         ),
 
