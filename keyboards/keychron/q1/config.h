@@ -1,4 +1,4 @@
-/* Copyright 2021 @ Keychron (https://www.keychron.com)
+/* Copyright 2021 @ Keychron(https://www.keychron.com)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,33 +16,42 @@
 
 #pragma once
 
-#define MATRIX_UNSELECT_DRIVE_HIGH
+/* USB Device descriptor parameter */
+#define VENDOR_ID       0x3434
+#define MANUFACTURER    Keychron
+#define PRODUCT         Keychron Q1
+
+/* key matrix size */
+#define MATRIX_ROWS 6
+#define MATRIX_COLS 15
+
+/* COL2ROW or ROW2COL */
+#define DIODE_DIRECTION ROW2COL
+
+/* Set 0 if debouncing isn't needed */
+#define DEBOUNCE 5
 
 /* RGB Matrix Driver Configuration */
-#define SNLED27351_I2C_ADDRESS_1 SNLED27351_I2C_ADDRESS_VDDIO
-#define SNLED27351_I2C_ADDRESS_2 SNLED27351_I2C_ADDRESS_GND
+#define DRIVER_COUNT 2
+#define DRIVER_ADDR_1 0b1010000
+#define DRIVER_ADDR_2 0b1011111
 
-#define SNLED27351_PHASE_CHANNEL SNLED27351_SCAN_PHASE_9_CHANNEL
+/* DIP switch */
+#define DIP_SWITCH_MATRIX_GRID  { {0,1} }
 
-/* Encoder Configuration*/
-#define ENCODER_DEFAULT_POS 0x3
 /* Disable DIP switch in matrix data */
 #define MATRIX_MASKED
 
 /* NKRO */
 #define FORCE_NKRO
 
-/* turn off effects when suspended */
+/* Disable RGB lighting when PC is in suspend */
 #define RGB_DISABLE_WHEN_USB_SUSPENDED
 
-/* Use 5 dynamic keymap layers */
-#define DYNAMIC_KEYMAP_LAYER_COUNT 5
-
-/* We have 2KB EEPROM size on STM32L432 */
-#define DYNAMIC_KEYMAP_EEPROM_MAX_ADDR 2047
-
-/* EEPROM Driver Configuration */
-#define EXTERNAL_EEPROM_I2C_BASE_ADDRESS 0b10100010
+/* Allow VIA to edit lighting */
+#ifdef VIA_ENABLE
+#define VIA_QMK_RGBLIGHT_ENABLE
+#endif
 
 // RGB Matrix Animation modes. Explicitly enabled
 // For full list of effects, see:
@@ -50,7 +59,7 @@
 // #define ENABLE_RGB_MATRIX_ALPHAS_MODS
 // #define ENABLE_RGB_MATRIX_GRADIENT_UP_DOWN
 // #define ENABLE_RGB_MATRIX_GRADIENT_LEFT_RIGHT
-// #define ENABLE_RGB_MATRIX_BREATHING
+#define ENABLE_RGB_MATRIX_BREATHING
 // #define ENABLE_RGB_MATRIX_BAND_SAT
 // #define ENABLE_RGB_MATRIX_BAND_VAL
 // #define ENABLE_RGB_MATRIX_BAND_PINWHEEL_SAT
@@ -77,29 +86,23 @@
 // #define ENABLE_RGB_MATRIX_PIXEL_FLOW
 // #define ENABLE_RGB_MATRIX_PIXEL_FRACTAL
 // enabled only if RGB_MATRIX_FRAMEBUFFER_EFFECTS is defined
-// #define ENABLE_RGB_MATRIX_TYPING_HEATMAP
+#define ENABLE_RGB_MATRIX_TYPING_HEATMAP
 // #define ENABLE_RGB_MATRIX_DIGITAL_RAIN
 // enabled only of RGB_MATRIX_KEYPRESSES or RGB_MATRIX_KEYRELEASES is defined
-// #define ENABLE_RGB_MATRIX_SOLID_REACTIVE_SIMPLE
-#define RGB_MATRIX_KEYPRESSES
-// #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
-// #define ENABLE_RGB_MATRIX_SOLID_REACTIVE
+#define ENABLE_RGB_MATRIX_SOLID_REACTIVE_SIMPLE
+#define ENABLE_RGB_MATRIX_SOLID_REACTIVE
 #define ENABLE_RGB_MATRIX_SOLID_REACTIVE_WIDE
-// #define RGBLIGHT_DEFAULT_HUE 180
-//   #define RGBLIGHT_DEFAULT_SAT 232
-//   #define RGBLIGHT_DEFAULT_VAR 255
-//   #define RGBLIGHT_DEFAULT_SPD 2
-// #define ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTIWIDE
-// #define ENABLE_RGB_MATRIX_SOLID_REACTIVE_CROSS
-// #define ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTICROSS
-// #define ENABLE_RGB_MATRIX_SOLID_REACTIVE_NEXUS
-// #define ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTINEXUS
-// #define ENABLE_RGB_MATRIX_SPLASH
-// #define ENABLE_RGB_MATRIX_MULTISPLASH
-// #define ENABLE_RGB_MATRIX_SOLID_SPLASH
-// #define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
+#define ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTIWIDE
+#define ENABLE_RGB_MATRIX_SOLID_REACTIVE_CROSS
+#define ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTICROSS
+#define ENABLE_RGB_MATRIX_SOLID_REACTIVE_NEXUS
+#define ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTINEXUS
+#define ENABLE_RGB_MATRIX_SPLASH
+#define ENABLE_RGB_MATRIX_MULTISPLASH
+#define ENABLE_RGB_MATRIX_SOLID_SPLASH
+#define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
 
 /* Allow VIA to edit lighting */
 #ifdef VIA_ENABLE
-#    define VIA_QMK_RGBLIGHT_ENABLE
+#define VIA_QMK_RGBLIGHT_ENABLE
 #endif
